@@ -12,6 +12,18 @@ import UIKit
 
 extension UILabel {
     
+    
+    func subtitlePrimary(){
+        self.textColor = UIColor.init(named: "green")
+        self.font = UIFont(name: FONT_TYPE_BOLD, size: 18)
+    }
+    
+    
+    func subtitleWhite(){
+        self.textColor = .white
+        self.font = UIFont(name: FONT_TYPE_BOLD, size: 18)
+    }
+    
     func labelRegular(){
         self.textColor = .black
         self.font = UIFont(name: FONT_TYPE_REGULAR, size: 16)
@@ -20,5 +32,10 @@ extension UILabel {
     func labelBold(){
         self.textColor = .black
         self.font = UIFont(name: FONT_TYPE_BOLD, size: 16)
+    }
+    
+    func labelRegularWhite(){
+        self.textColor = .white
+        self.font = UIFont(name: FONT_TYPE_REGULAR, size: 16)
     }
 }
