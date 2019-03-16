@@ -49,7 +49,16 @@ class MoviesListViewController: UIViewController {
     
     
     private func showMovieDetail(movie:Movie){
-        performSegue(withIdentifier: "list_to_detail", sender: nil)
+        performSegue(withIdentifier: "list_to_detail", sender: movie)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "list_to_detail" {
+            if let vc:MovieDetailViewController = segue.destination as? MovieDetailViewController {
+                vc.movie = sender as? Movie
+            }
+        }
     }
 }
 
