@@ -28,6 +28,7 @@
 		648EB0DC223D781000D9E030 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0B4223C923700D9E030 /* Rubik-Light.ttf */; };
 		648EB0DD223D781300D9E030 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0B5223C923800D9E030 /* Rubik-Medium.ttf */; };
 		648EB0DE223D781500D9E030 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0B6223C923800D9E030 /* Rubik-Regular.ttf */; };
+		64CA2D6D223D7E0D00B2E035 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CA2D6C223D7E0D00B2E035 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		648EB0D6223D486800D9E030 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		648EB0D8223D5BAB00D9E030 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		648EB0DA223D5BB100D9E030 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64CA2D6C223D7E0D00B2E035 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		9133472BC9FB7AF3A8C6ED68 /* Pods_themoviedatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_themoviedatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF35E407EEF8A36C9AD56BBD /* Pods-themoviedatabase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-themoviedatabase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-themoviedatabase/Pods-themoviedatabase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 		648EB0B2223C91B400D9E030 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				64CA2D6C223D7E0D00B2E035 /* MovieDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				648EB095223C7A6B00D9E030 /* AppDelegate.swift in Sources */,
 				648EB0BE223CA8D000D9E030 /* ProductionCompany.swift in Sources */,
 				648EB0D5223D475500D9E030 /* UILabel.swift in Sources */,
+				64CA2D6D223D7E0D00B2E035 /* MovieDetailViewController.swift in Sources */,
 				648EB0D7223D486800D9E030 /* UIView.swift in Sources */,
 				648EB0BA223CA3B100D9E030 /* ListMovies.swift in Sources */,
 				648EB09D223C7A6B00D9E030 /* themoviedatabase.xcdatamodeld in Sources */,

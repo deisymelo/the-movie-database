@@ -41,8 +41,15 @@ class MoviesListViewController: UIViewController {
             cell.image.kf.setImage(with: URL(string: urlImage))
         }.disposed(by: disposeBag)
         
-
         
+        moviesCollectionView.rx.modelSelected(Movie.self).subscribe(onNext:  { value in
+                self.showMovieDetail(movie: value)
+        }).disposed(by: disposeBag)
+    }
+    
+    
+    private func showMovieDetail(movie:Movie){
+        performSegue(withIdentifier: "list_to_detail", sender: nil)
     }
 }
 
