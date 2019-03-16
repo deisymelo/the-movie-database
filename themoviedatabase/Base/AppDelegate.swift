@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //cambia el estilo de la barra de navegación
+        UINavigationBar.appearance().backgroundColor = UIColor.init(named: "green_dart")
+        UINavigationBar.appearance().tintColor = UIColor.white //cambia el color del boton atrás
+        //Establece la typografía que tendrá la barra de navegación
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: FONT_TYPE_BOLD, size: 16)!]
         return true
     }
 
