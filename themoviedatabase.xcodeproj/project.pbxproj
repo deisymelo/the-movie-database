@@ -25,6 +25,9 @@
 		648EB0D2223D45CC00D9E030 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0D0223D45CC00D9E030 /* MovieCollectionViewCell.xib */; };
 		648EB0D5223D475500D9E030 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EB0D4223D475500D9E030 /* UILabel.swift */; };
 		648EB0D7223D486800D9E030 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EB0D6223D486800D9E030 /* UIView.swift */; };
+		648EB0DC223D781000D9E030 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0B4223C923700D9E030 /* Rubik-Light.ttf */; };
+		648EB0DD223D781300D9E030 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0B5223C923800D9E030 /* Rubik-Medium.ttf */; };
+		648EB0DE223D781500D9E030 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648EB0B6223C923800D9E030 /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -307,10 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				648EB0D2223D45CC00D9E030 /* MovieCollectionViewCell.xib in Resources */,
+				648EB0DE223D781500D9E030 /* Rubik-Regular.ttf in Resources */,
+				648EB0DC223D781000D9E030 /* Rubik-Light.ttf in Resources */,
 				648EB0A2223C7A6B00D9E030 /* LaunchScreen.storyboard in Resources */,
 				648EB0B8223C9C3600D9E030 /* Colors.xcassets in Resources */,
 				648EB09F223C7A6B00D9E030 /* Assets.xcassets in Resources */,
 				648EB09A223C7A6B00D9E030 /* Main.storyboard in Resources */,
+				648EB0DD223D781300D9E030 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +350,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-themoviedatabase/Pods-themoviedatabase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -354,6 +361,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",

@@ -11,4 +11,6 @@ target 'themoviedatabase' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
+  
+  pod 'Kingfisher'
 end

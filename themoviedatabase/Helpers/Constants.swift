@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 let pathEndPoints = "https://api.themoviedb.org/3"
+let pathImages = "https://image.tmdb.org/t/p/w300"
 let apiKey = "80cc68d40cb6546b32f579adde87700b"
 
 

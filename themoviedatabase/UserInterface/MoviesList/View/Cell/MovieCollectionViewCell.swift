@@ -12,16 +12,16 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var content: UIView!
     @IBOutlet var image: UIImageView!
-    @IBOutlet var lblTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setStyles()
     }
-
     
     func setStyles(){
         content.cornerStyle()
-        lblTitle.labelBold()
+        self.image.layer.cornerRadius = cornerRadius
+        self.image.layer.masksToBounds = false
+        self.image.clipsToBounds = true
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class MoviesListViewController: UIViewController {
 
@@ -36,9 +37,9 @@ class MoviesListViewController: UIViewController {
  
         
         viewModel.moviesList.bind(to: moviesCollectionView.rx.items(cellIdentifier: "cellMovie", cellType: MovieCollectionViewCell.self)) {  (row,movie,cell) in
-            cell.lblTitle.text = movie.title
-            //cell.image.image = UIImage
-            }.disposed(by: disposeBag)
+            let urlImage = "\(pathImages)\(movie.posterPath!)"
+            cell.image.kf.setImage(with: URL(string: urlImage))
+        }.disposed(by: disposeBag)
         
 
         
