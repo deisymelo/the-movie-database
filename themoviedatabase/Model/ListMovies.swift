@@ -14,7 +14,7 @@ class ListMovies: Mappable {
     var page:Int?
     var totalResults:Int?
     var totalPages:Int?
-    var results:Movie?
+    var results:[Movie]?
     
     required init?(map: Map) {}
     
