@@ -110,6 +110,12 @@ class MovieDetailViewController: UIViewController {
             
         }.disposed(by: disposeBag)
         
+        
+        viewModel.error.subscribe(onNext: { (message) in
+            self.showAlertWithMessage(title: "Error", msn: message)
+        }).disposed(by: disposeBag)
+
+        
     }
     
     

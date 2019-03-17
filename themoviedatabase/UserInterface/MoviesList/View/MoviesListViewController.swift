@@ -45,6 +45,12 @@ class MoviesListViewController: UIViewController {
         moviesCollectionView.rx.modelSelected(Movie.self).subscribe(onNext:  { value in
                 self.showMovieDetail(movie: value)
         }).disposed(by: disposeBag)
+        
+        
+        viewModel.error.subscribe(onNext: { (message) in
+            self.showAlertWithMessage(title: "Error", msn: message)
+        }).disposed(by: disposeBag)
+
     }
     
     
