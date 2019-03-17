@@ -14,7 +14,7 @@ extension UIView{
     func cornerStyle(){
         self.backgroundColor = .white
         self.layer.cornerRadius = cornerRadius
-        self.layer.borderWidth = 0.5
+        self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.init(named: "gray")?.cgColor
     }
     
