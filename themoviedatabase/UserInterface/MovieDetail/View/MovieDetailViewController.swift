@@ -55,6 +55,8 @@ class MovieDetailViewController: UIViewController {
         }
         
         viewModel.getCastList(movieId: movie.id ?? 0)
+        viewModel.getGender(genreIds: movie.genreIds ?? [])
+        
         
         let urlPoster = "\(pathImages)\(movie.posterPath!)"
         let urlBackdrop = "\(pathImages)\(movie.backdropPath!)"
@@ -102,5 +104,10 @@ class MovieDetailViewController: UIViewController {
             cell.photo.kf.setImage(with: URL(string: urlImage))
             
         }.disposed(by: disposeBag)
+        
+        
+        viewModel.genreString.subscribe(onNext: { (list) in
+            print(list)
+        }).disposed(by: disposeBag)
     }
 }
