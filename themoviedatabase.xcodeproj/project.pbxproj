@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		53C70286CF32EE77761CDFC3 /* Pods_themoviedatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9133472BC9FB7AF3A8C6ED68 /* Pods_themoviedatabase.framework */; };
+		641ED9CE223DEFC000866FCE /* GenresCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641ED9CC223DEFC000866FCE /* GenresCollectionViewCell.swift */; };
+		641ED9CF223DEFC000866FCE /* GenresCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641ED9CD223DEFC000866FCE /* GenresCollectionViewCell.xib */; };
 		648EB095223C7A6B00D9E030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EB094223C7A6B00D9E030 /* AppDelegate.swift */; };
 		648EB097223C7A6B00D9E030 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EB096223C7A6B00D9E030 /* MoviesListViewController.swift */; };
 		648EB09A223C7A6B00D9E030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648EB098223C7A6B00D9E030 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		1859432C355FFA826E4895C6 /* Pods-themoviedatabase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-themoviedatabase.release.xcconfig"; path = "Pods/Target Support Files/Pods-themoviedatabase/Pods-themoviedatabase.release.xcconfig"; sourceTree = "<group>"; };
+		641ED9CC223DEFC000866FCE /* GenresCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresCollectionViewCell.swift; sourceTree = "<group>"; };
+		641ED9CD223DEFC000866FCE /* GenresCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresCollectionViewCell.xib; sourceTree = "<group>"; };
 		648EB091223C7A6A00D9E030 /* themoviedatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = themoviedatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648EB094223C7A6B00D9E030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648EB096223C7A6B00D9E030 /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 				1859432C355FFA826E4895C6 /* Pods-themoviedatabase.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		641ED9CB223DEF9E00866FCE /* GeneresCell */ = {
+			isa = PBXGroup;
+			children = (
+				641ED9CC223DEFC000866FCE /* GenresCollectionViewCell.swift */,
+				641ED9CD223DEFC000866FCE /* GenresCollectionViewCell.xib */,
+			);
+			path = GeneresCell;
 			sourceTree = "<group>";
 		};
 		648EB088223C7A6A00D9E030 = {
@@ -212,6 +225,7 @@
 		648EB0B2223C91B400D9E030 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				641ED9CB223DEF9E00866FCE /* GeneresCell */,
 				64CA2D6E223DA7A700B2E035 /* CastCell */,
 				64CA2D6C223D7E0D00B2E035 /* MovieDetailViewController.swift */,
 			);
@@ -336,6 +350,7 @@
 				648EB0DE223D781500D9E030 /* Rubik-Regular.ttf in Resources */,
 				648EB0DC223D781000D9E030 /* Rubik-Light.ttf in Resources */,
 				648EB0A2223C7A6B00D9E030 /* LaunchScreen.storyboard in Resources */,
+				641ED9CF223DEFC000866FCE /* GenresCollectionViewCell.xib in Resources */,
 				64CA2D72223DA7C100B2E035 /* CastCollectionViewCell.xib in Resources */,
 				648EB0B8223C9C3600D9E030 /* Colors.xcassets in Resources */,
 				648EB09F223C7A6B00D9E030 /* Assets.xcassets in Resources */,
@@ -418,6 +433,7 @@
 				648EB0C0223CAA5F00D9E030 /* Genre.swift in Sources */,
 				648EB0D1223D45CC00D9E030 /* MovieCollectionViewCell.swift in Sources */,
 				648EB0CA223D3CB300D9E030 /* MoviesListViewModel.swift in Sources */,
+				641ED9CE223DEFC000866FCE /* GenresCollectionViewCell.swift in Sources */,
 				64CA2D74223DA9B300B2E035 /* DetailViewModel.swift in Sources */,
 				648EB0CD223D3E8F00D9E030 /* Constants.swift in Sources */,
 			);

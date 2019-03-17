@@ -25,7 +25,11 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet var titleCast: UILabel!
     @IBOutlet var castCollectionView: UICollectionView!
     @IBOutlet var loaderCast: UIActivityIndicatorView!
- 
+    
+    @IBOutlet var genresCollectionView: UICollectionView!
+    
+    @IBOutlet var titleGenres: UILabel!
+    
     @IBOutlet var heightView: NSLayoutConstraint!
     
     var movie:Movie?
@@ -39,7 +43,9 @@ class MovieDetailViewController: UIViewController {
          self.navigationItem.title = self.movie?.title ?? "Movie Detail"
         setStyles()
         showInitialData()
-        setupBinding()
+        setupCastBinding()
+        setupGenresBinding()
+        viewModel.getGenresList()
     }
     
 
@@ -55,8 +61,6 @@ class MovieDetailViewController: UIViewController {
         }
         
         viewModel.getCastList(movieId: movie.id ?? 0)
-        viewModel.getGender(genreIds: movie.genreIds ?? [])
-        
         
         let urlPoster = "\(pathImages)\(movie.posterPath!)"
         let urlBackdrop = "\(pathImages)\(movie.backdropPath!)"
@@ -81,9 +85,8 @@ class MovieDetailViewController: UIViewController {
     }
     
     
-    private func setupBinding(){
+    private func setupCastBinding(){
         self.castCollectionView.register(UINib(nibName: "CastCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: "castCell"))
-        
         
         viewModel.loading.subscribe(onNext: { (isLoader) in
             isLoader ? self.loaderCast.startAnimating() : self.loaderCast.stopAnimating()
@@ -105,9 +108,19 @@ class MovieDetailViewController: UIViewController {
             
         }.disposed(by: disposeBag)
         
+    }
+    
+    
+    private func setupGenresBinding(){
+        self.genresCollectionView.register(UINib(nibName: "GenresCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: "genreCell"))
         
-        viewModel.genreString.subscribe(onNext: { (list) in
-            print(list)
+        
+        viewModel.genresList.subscribe(onNext: { (list) in
+            self.viewModel.getGender(genreIds: self.movie?.genreIds ?? [], list: list)
         }).disposed(by: disposeBag)
+        
+        viewModel.genreString.bind(to: genresCollectionView.rx.items(cellIdentifier: "genreCell", cellType: GenresCollectionViewCell.self)) { (row, genre, cell) in
+            cell.lblGenre.text = genre
+            }.disposed(by: disposeBag)
     }
 }

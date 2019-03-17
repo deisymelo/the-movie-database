@@ -22,7 +22,7 @@ class DetailViewModel {
     public let loading: PublishSubject<Bool> = PublishSubject()
     public let genreString: PublishSubject<[String]> =  PublishSubject()
     
-    fileprivate let genresList: PublishSubject<[Genre]> = PublishSubject()
+    public let genresList: PublishSubject<[Genre]> = PublishSubject()
     
     private let disposable = DisposeBag()
     
@@ -57,22 +57,19 @@ class DetailViewModel {
     /**
      De la lista de géneros, consulta el nombre de cada uno y los retrona en un array de String
      **/
-    public func getGender(genreIds ids:[Int]){
-        getGenresList()
+    public func getGender(genreIds ids:[Int], list:[Genre]){
+        //getGenresList()
         var genreNames = [String]()
         
-        genresList.subscribe({ (list) in
-            for id:Int in ids {
-                let genre = list.element?.filter({ (genre) -> Bool in
-                    return genre.id ==  id
-                }).first
-                
-                genreNames.append(genre?.name ?? "")
-            }
-          
-            self.genreString.onNext(genreNames)
+        for id:Int in ids {
+            let genre = list.filter({ (genre) -> Bool in
+                return genre.id ==  id
+            }).first
             
-        }).disposed(by: disposable)
+            genreNames.append(genre?.name ?? "")
+        }
+        
+        self.genreString.onNext(genreNames)
     }
     
 
@@ -82,7 +79,7 @@ class DetailViewModel {
         Consulta en la base de datos del dispositivo la lista de géneros
         de películas. Si no hay datos registrados, hace la consulta al api.
      **/
-    private func getGenresList(){
+    public func getGenresList(){
         // llama el objeto AppDelegate para poder utilizar las funciones que allí se encuentran
         let appDelegate =  UIApplication.shared.delegate as! AppDelegate
         //se obtiene el contexto: Es la interfaz para acceder a la base de datos...
