@@ -43,4 +43,10 @@ extension UILabel {
         self.textColor = .white
         self.font = UIFont(name: FONT_TYPE_REGULAR, size: 14)
     }
+    
+    
+    func labelBoldWhite(){
+        self.textColor = .white
+        self.font = UIFont(name: FONT_TYPE_BOLD, size: 14)
+    }
 }

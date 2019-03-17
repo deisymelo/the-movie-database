@@ -1,5 +1,5 @@
 //
-//  MovieCollectionViewCell.swift
+//  GenresCollectionViewCell.swift
 //  themoviedatabase
 //
 //  Created by Deisy Melo on 3/16/19.
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class GenresCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var content: UIView!
-    @IBOutlet var image: UIImageView!
+    
+    @IBOutlet var lblGenre: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setStyles()
     }
+
     
     func setStyles(){
-        content.cardStyle()
-        self.image.setCorner()
+        content.backgroundGenres()
+        lblGenre.labelRegularWhite()
     }
 }

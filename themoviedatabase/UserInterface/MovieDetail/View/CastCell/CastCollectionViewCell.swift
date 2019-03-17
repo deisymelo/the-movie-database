@@ -21,13 +21,10 @@ class CastCollectionViewCell: UICollectionViewCell {
     }
         
     func setStyles(){
-        content.cornerStyle()
+        content.cardStyle()
         lblCharacter.labelBold()
         lblName.labelRegular()
-        
-        self.photo.layer.cornerRadius = cornerRadius
-        self.photo.layer.masksToBounds = false
-        self.photo.clipsToBounds = true
+        photo.setCorner()
     }
 
 }

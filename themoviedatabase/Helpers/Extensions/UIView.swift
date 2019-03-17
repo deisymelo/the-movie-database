@@ -11,11 +11,24 @@ import UIKit
 
 extension UIView{
     
-    func cornerStyle(){
+    func cardStyle(){
         self.backgroundColor = .white
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.init(named: "gray")?.cgColor
+    }
+    
+    
+    
+    func backgroundGenres(){
+        self.backgroundColor = UIColor(named: "gray_dart")
+        self.layer.cornerRadius = 10
+    }
+    
+    func setCorner(){
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = false
+        self.clipsToBounds = true
     }
     
 }

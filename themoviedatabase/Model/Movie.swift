@@ -27,6 +27,7 @@ class Movie: Mappable {
     var homepage:String?
     var productionCompanies:[ProductionCompany]?
     var genres:[Genre]?
+    var genreIds:[Int]?
     
     required init?(map: Map) {}
     
@@ -49,5 +50,6 @@ class Movie: Mappable {
         homepage <- map["homepage"]
         productionCompanies <- map["production_companies"]
         genres <- map["genres"]
+        genreIds <- map["genre_ids"]
     }
 }

@@ -15,6 +15,9 @@ class Genre: Mappable {
     var name:String?
     
     required init?(map: Map) {}
+    init() {
+        
+    }
     
     func mapping(map: Map) {
         id <- map["id"]
