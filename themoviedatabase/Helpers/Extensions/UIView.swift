@@ -18,4 +18,11 @@ extension UIView{
         self.layer.borderColor = UIColor.init(named: "gray")?.cgColor
     }
     
+    
+    
+    func backgroundGenres(){
+        self.backgroundColor = UIColor(named: "gray_dart")
+        self.layer.cornerRadius = 10
+    }
+    
 }

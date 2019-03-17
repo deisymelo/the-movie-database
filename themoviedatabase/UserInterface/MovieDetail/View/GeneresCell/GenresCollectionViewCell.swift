@@ -16,7 +16,12 @@ class GenresCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setStyles()
     }
 
+    
+    func setStyles(){
+        content.backgroundGenres()
+        lblGenre.labelRegularWhite()
+    }
 }

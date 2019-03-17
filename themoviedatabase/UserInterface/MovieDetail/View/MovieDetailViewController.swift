@@ -82,6 +82,7 @@ class MovieDetailViewController: UIViewController {
         self.titleUserscore.subtitleWhite()
         self.lblUserScrore.subtitlePrimary()
         self.titleCast.subtitle()
+        self.titleGenres.subtitle()
     }
     
     
