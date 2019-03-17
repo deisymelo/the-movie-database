@@ -24,8 +24,10 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet var titleUserscore: UILabel!
     @IBOutlet var titleCast: UILabel!
     @IBOutlet var castCollectionView: UICollectionView!
-    
     @IBOutlet var loaderCast: UIActivityIndicatorView!
+ 
+    @IBOutlet var heightView: NSLayoutConstraint!
+    
     var movie:Movie?
     
     let disposeBag = DisposeBag()
@@ -39,6 +41,12 @@ class MovieDetailViewController: UIViewController {
         showInitialData()
         setupBinding()
     }
+    
+
+    override func viewDidAppear(_ animated: Bool) {
+        self.heightView.constant += (self.lblOverview.frame.height)
+    }
+    
     
     private func showInitialData(){
         guard let movie = self.movie else {
