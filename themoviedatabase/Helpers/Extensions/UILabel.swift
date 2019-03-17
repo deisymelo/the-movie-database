@@ -12,6 +12,11 @@ import UIKit
 
 extension UILabel {
     
+    func subtitle(){
+        self.textColor = .black
+        self.font = UIFont(name: FONT_TYPE_BOLD, size: 18)
+    }
+    
     
     func subtitlePrimary(){
         self.textColor = UIColor.init(named: "green")
