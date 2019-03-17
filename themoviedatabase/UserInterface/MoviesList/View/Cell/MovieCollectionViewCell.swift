@@ -19,9 +19,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     func setStyles(){
-        content.cornerStyle()
-        self.image.layer.cornerRadius = cornerRadius
-        self.image.layer.masksToBounds = false
-        self.image.clipsToBounds = true
+        content.cardStyle()
+        self.image.setCorner()
     }
 }

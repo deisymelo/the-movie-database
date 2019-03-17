@@ -69,7 +69,7 @@ class MovieDetailViewController: UIViewController {
         self.imgBackdrop.kf.setImage(with: URL(string: urlBackdrop))
         
         self.lblTitle.text =  movie.title
-        self.lblDate.text = movie.releaseDate
+        self.lblDate.text = movie.releaseDate?.getYear()
         self.lblOverview.text =  movie.overview
         self.lblUserScrore.text =  movie.voteAverage?.description
     }
@@ -83,6 +83,7 @@ class MovieDetailViewController: UIViewController {
         self.lblUserScrore.subtitlePrimary()
         self.titleCast.subtitle()
         self.titleGenres.subtitle()
+        self.imgPoster.setCorner()
     }
     
     
